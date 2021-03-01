@@ -13,6 +13,13 @@ package com.rpg;
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
+	double R=1;
+	double t=1;
+	double f=1;
+	double p=1;
+	double gammaO2= (6.09/(Math.pow(f,2)+0.227)+(7.19*Math.pow(10,-3))+4.81/(Math.pow((f-57),2)+1.5))*Math.pow(f,2)*Math.pow(10,-3);
+	double gammaH2O=(0.05+3.6/(Math.pow((f-22.2),2)+8.5)+0.021*p+10.6/(Math.pow((f-188.3),2)+9)+8.9/(Math.pow((f-325.4),2)+26.3))*Math.pow(f,2)*p*Math.pow(10,-4);
+	double Wa = R*((1-(t-15)*0.01)*gammaO2+(1-15)*0.06)* gammaH2O;
+
     }
 }
